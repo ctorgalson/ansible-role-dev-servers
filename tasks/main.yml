@@ -11,7 +11,10 @@
     path: "{{ vagrant_path }}"
   register: vagrant
 
-- name: Add vagrant plugins.
-  shell: "vagrant plugin install {{ item.plugin_name }}"
-  with_items: "{{ vagrant_plugins }}"
-  when: "{{ vagrant.exists }}"
+- name: Debug.
+  debug: var=vagrant
+
+  # - name: Add vagrant plugins.
+  #   shell: "vagrant plugin install {{ item.plugin_name }}"
+  #   with_items: "{{ vagrant_plugins }}"
+  #   when: "{{ vagrant.exists }}"
