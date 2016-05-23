@@ -4,4 +4,4 @@
   git:
     repo: "{{ item.repo }}/{{ item.name }}.git"
     destination: "{{ server_directory }}/{{ item.name }}"
-  with: "{{ servers }}"
+  with_items: "{{ servers }}"
