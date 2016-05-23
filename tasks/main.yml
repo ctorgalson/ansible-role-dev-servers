@@ -1,15 +1,9 @@
 ---
-- name: List server directory contents.
-  shell: "ls {{ server_directory }}"
-  register: server_directory_contents
-
-- name: Debug variable
-  debug: var=server_directory_contents
-
 # Get server repo.
 - name: Clone server repository.
   git:
     repo: "{{ item.repo }}/{{ item.name }}.git"
     dest: "{{ server_directory }}/{{ item.name }}"
   with_items: "{{ servers }}"
-  when: "{{ item.name }} not in {{ server_directory_contents.stdout }}"
+  clone: no
+  update: yes
