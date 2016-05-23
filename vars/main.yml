@@ -13,3 +13,6 @@ vagrant_plugins:
   - {
     plugin_name: "vagrant-hostsupdater"
   }
+  - {
+    plugin_name: "vagrant_trigger"
+  }
