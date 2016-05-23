@@ -12,4 +12,4 @@
     repo: "{{ item.repo }}/{{ item.name }}.git"
     dest: "{{ server_directory }}/{{ item.name }}"
   with_items: "{{ servers }}"
-  when: "{{ item.name }} in {{ server_directory_contents.stdout }}"
+  when: "{{ item.name }} not in {{ server_directory_contents.stdout }}"
