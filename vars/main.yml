@@ -4,5 +4,5 @@ server_directory: "~/Servers"
 servers:
   - {
     name: "crd7",
-    repo: "git://git@bitbucket.org:{{ bitbucketuser }}"
+    repo: "git@bitbucket.org:{{ bitbucketuser }}"
   }
