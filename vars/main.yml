@@ -3,6 +3,6 @@ server_directory: "~/Servers"
 
 servers:
   - {
-    name: "crd7",
-    repo: "git@bitbucket.org:{{ bitbucketuser }}"
+    directory: "crd7",
+    repository: "git@bitbucket.org:ctorgalson/crd7.git"
   }
