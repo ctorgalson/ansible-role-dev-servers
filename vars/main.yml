@@ -1,12 +1,4 @@
 ---
-vars_prompt:
-  - name: "butbucketuser"
-    prompt: "Enter your Bitbucket username"
-    private: no
-  - name: "bitbucketpass"
-    prompt: "Enter your Bitbucket password"
-    private: yes
-
 server_directory: "~/Servers"
 
 servers:
