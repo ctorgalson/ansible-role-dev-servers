@@ -11,5 +11,5 @@ vagrant_path: "/usr/local/bin/vagrant"
 
 vagrant_plugins:
   - {
-    plugin_name: "vagrant-hostupdater"
+    plugin_name: "vagrant-hostsupdater"
   }
