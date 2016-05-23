@@ -1,4 +1,6 @@
 ---
+- include_vars: bitbucket.yml
+
 # Get server repo.
 - name: Clone server repository.
   git:
