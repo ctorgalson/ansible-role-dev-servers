@@ -1,5 +1,10 @@
 ---
-- include_vars: bitbucket.yml
+- name: List server directory contents.
+  shell: "ls {{ server_directory }}"
+  register: server_directory_contents
+
+- name: Debug variable
+  debug: var=server_directory_contents
 
 # Get server repo.
 - name: Clone server repository.
