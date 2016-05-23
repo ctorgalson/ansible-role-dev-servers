@@ -4,6 +4,6 @@
   git:
     repo: "{{ item.repo }}/{{ item.name }}.git"
     dest: "{{ server_directory }}/{{ item.name }}"
+    clone: no
+    update: yes
   with_items: "{{ servers }}"
-  clone: no
-  update: yes
