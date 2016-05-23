@@ -14,5 +14,5 @@ vagrant_plugins:
     plugin_name: "vagrant-hostsupdater"
   }
   - {
-    plugin_name: "vagrant-trigger"
+    plugin_name: "vagrant-triggers"
   }
