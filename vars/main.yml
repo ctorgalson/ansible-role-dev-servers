@@ -7,7 +7,7 @@ servers:
     repository: "git@bitbucket.org:ctorgalson/crd7.git"
   }
 
-vagrant_binary: "/usr/local/bin/vagrant"
+vagrant_path: "/usr/local/bin/vagrant"
 
 vagrant_plugins:
   - {
