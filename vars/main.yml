@@ -6,3 +6,10 @@ servers:
     directory: "crd7",
     repository: "git@bitbucket.org:ctorgalson/crd7.git"
   }
+
+vagrant_binary: "/usr/local/bin/vagrant"
+
+vagrant_plugins:
+  - {
+    plugin_name: "vagrant-hostupdater"
+  }

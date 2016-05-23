@@ -1,8 +1,17 @@
 ---
-# Get server repo.
 - name: Clone server repository.
   git:
     repo: "{{ item.repository }}"
     dest: "{{ server_directory }}/{{ item.directory }}"
     update: yes
   with_items: "{{ servers }}"
+
+- name: Test if Vagrant exists.
+  stat:
+    path: "{{ vagrant_path }}"
+  register: vagrant
+
+- name: Add vagrant plugins.
+  shell: "vagrant plugin install {{ item.plugin_name }}"
+  with_items: "{{ vagrant_plugins }}"
+  when: "{{ vagrant.exists }}"
