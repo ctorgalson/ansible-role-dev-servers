@@ -5,5 +5,5 @@
 - name: Clone server repository.
   git:
     repo: "{{ item.repo }}/{{ item.name }}.git"
-    destination: "{{ server_directory }}/{{ item.name }}"
+    dest: "{{ server_directory }}/{{ item.name }}"
   with_items: "{{ servers }}"
