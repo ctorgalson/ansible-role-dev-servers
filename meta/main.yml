@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Christopher Torgalson
+  description: Installs dev server repo and extras related to Vagrant etc.
+  min_ansible_version: 1.2
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+  categories:
+    - system
+dependencies: []

@@ -1,0 +1,8 @@
+---
+server_directory: "~/Servers"
+
+servers:
+  - {
+    name: "crd7",
+    repo: "https://{{ bitbucketuser }}:{{ bitbucketpass }}@bitbucket.org"
+  }

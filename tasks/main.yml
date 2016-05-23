@@ -1,0 +1,7 @@
+---
+# Get server repo.
+- name: Clone server repository.
+  git:
+    repo: "{{ item.repo }}/{{ item.name }}.git"
+    destination: "{{ server_directory }}/{{ item.name }}"
+  with: "{{ servers }}"
