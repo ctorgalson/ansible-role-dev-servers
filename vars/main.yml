@@ -6,6 +6,10 @@ servers:
     directory: "crd7",
     repository: "git@bitbucket.org:ctorgalson/crd7.git"
   }
+  - {
+    directory: "chq",
+    repository: "git@bitbucket.org:ctorgalson/chq.git"
+  }
 
 vagrant_path: "/usr/local/bin/vagrant"
 
