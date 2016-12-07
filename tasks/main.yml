@@ -5,6 +5,7 @@
     dest: "{{ server_directory }}/{{ item.directory }}"
     update: yes
   with_items: "{{ servers }}"
+  become: "{{ server_owner }}"
 
 - name: Test if Vagrant exists.
   stat:

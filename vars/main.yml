@@ -1,4 +1,6 @@
 ---
+server_owner: "ctorgalson"
+
 server_directory: "~/Servers"
 
 servers:
