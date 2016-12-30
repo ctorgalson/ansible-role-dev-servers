@@ -4,6 +4,7 @@
     repo: "{{ item.repository }}"
     dest: "{{ server_directory }}/{{ item.directory }}"
     update: yes
+    accept_hostkey: True
   with_items: "{{ servers }}"
   become: "{{ server_owner }}"
 
