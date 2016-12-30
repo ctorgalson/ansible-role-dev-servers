@@ -3,7 +3,7 @@
   git:
     repo: "{{ item.url }}"
     dest: "{{ servers_server_directory }}/{{ item.name }}"
-    update: yes
+    update: no
     accept_hostkey: True
   with_items: "{{ servers }}"
   become: "{{ servers_repo_owner }}"
