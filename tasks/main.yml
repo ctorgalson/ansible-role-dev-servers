@@ -1,16 +1,23 @@
 ---
 - name: Clone server repositories.
   git:
-    repo: "{{ item.repository }}"
-    dest: "{{ server_directory }}/{{ item.directory }}"
+    repo: "{{ item.url }}"
+    dest: "{{ servers_server_directory }}/{{ item.name }}"
     update: yes
     accept_hostkey: True
   with_items: "{{ servers }}"
-  become: "{{ server_owner }}"
+  become: "{{ servers_repo_owner }}"
+
+- name: Set permissions on newly cloned repos.
+  file:
+    path: "{{ servers_server_directory }}/{{ item.name }}"
+    owner: "{{ servers_directory_owner }}"
+  with_items: "{{ servers }}"
+  become: True
 
 - name: Test if Vagrant exists.
   stat:
-    path: "{{ vagrant_path }}"
+    path: "{{ servers_vagrant_path }}"
   register: vagrant
 
 - name: Add vagrant plugins.
