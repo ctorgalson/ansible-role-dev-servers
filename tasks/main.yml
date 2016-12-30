@@ -1,5 +1,5 @@
 ---
-- name: Clone server repository.
+- name: Clone server repositories.
   git:
     repo: "{{ item.repository }}"
     dest: "{{ server_directory }}/{{ item.directory }}"
