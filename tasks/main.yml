@@ -8,7 +8,7 @@
   with_items: "{{ servers }}"
   become: "{{ servers_repo_owner }}"
 
-- name: Set permissions on newly cloned repos.
+- name: Set permissions on newly cloned repos (we don't worry about group).
   file:
     path: "{{ servers_server_directory }}/{{ item.name }}"
     owner: "{{ servers_directory_owner }}"
