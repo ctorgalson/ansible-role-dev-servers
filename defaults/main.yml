@@ -4,7 +4,7 @@
 servers_repo_owner: "ctorgalson"
 
 # Which user should own the parent directories?
-servers_directory_owner: "root"
+servers_directory_owner: "ctorgalson"
 
 # Where should the github repos be cloned to?
 servers_server_directory: "~/Servers"
