@@ -1,24 +1,29 @@
 ---
-server_owner: "ctorgalson"
+# Which user will have a key in their ~/.ssh directory that can be used to clone
+# the repo(s)?
+servers_repo_owner: "ctorgalson"
 
-server_directory: "~/Servers"
+# Which user should own the parent directories?
+servers_directory_owner: "root"
 
+# Where should the github repos be cloned to?
+servers_server_directory: "~/Servers"
+
+# Which github repos do we need?
 servers:
   - {
-    directory: "crd7",
-    repository: "git@bitbucket.org:ctorgalson/crd7.git"
+    name: "crd7",
+    url: "git@bitbucket.org:ctorgalson/crd7.git"
   }
   - {
-    directory: "chq",
-    repository: "git@bitbucket.org:ctorgalson/chq.git"
+    name: "chq",
+    url: "git@bitbucket.org:ctorgalson/chq.git"
   }
 
-vagrant_path: "/usr/local/bin/vagrant"
+# Path to Vagrant on this machine?
+servers_vagrant_path: "/usr/local/bin/vagrant"
 
-vagrant_plugins:
-  - {
-    plugin_name: "vagrant-hostsupdater"
-  }
-  - {
-    plugin_name: "vagrant-triggers"
-  }
+# Which vagrant plugins do we need?
+servers_vagrant_plugins:
+  - "vagrant-hostsupdater"
+  - "vagrant-triggers"
