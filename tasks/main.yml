@@ -1,4 +1,10 @@
 ---
+- name: Ensure server directory exists.
+  file:
+    path: "{{ servers_server_directory }}"
+    state: directory
+  become: "{{ servers_directory_owner }}"
+
 - name: Clone server repositories.
   git:
     repo: "{{ item.url }}"
