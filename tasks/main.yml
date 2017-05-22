@@ -22,6 +22,7 @@
     state: directory
     owner: "{{ servers_directory_owner }}"
     group: "{{ servers_directory_group }}"
+    recurse: yes
   with_items: "{{ servers }}"
   become: true
 
