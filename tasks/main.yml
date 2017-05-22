@@ -31,6 +31,6 @@
   register: vagrant
 
 - name: Add vagrant plugins.
-  shell: "vagrant plugin install {{ item.plugin_name }}"
+  shell: "vagrant plugin install {{ item }}"
   with_items: "{{ vagrant_plugins }}"
   when: "{{ vagrant.stat.exists }}"
