@@ -3,6 +3,8 @@
   file:
     path: "{{ servers_server_directory }}"
     state: directory
+    owner: "{{ servers_directory_owner }}"
+    group: "{{ servers_directory_group }}"
   become: true
 
 - name: Clone server repositories.
@@ -12,7 +14,16 @@
     update: no
     accept_hostkey: True
   with_items: "{{ servers }}"
-  become: "{{ servers_repo_owner }}"
+  become: true
+
+- name: Update permissions on newly cloned directories.
+  file:
+    path: "{{ servers_server_directory }}/{{ item.name }}"
+    state: directory
+    owner: "{{ servers_directory_owner }}"
+    group: "{{ servers_directory_group }}"
+  with_items: "{{ servers }}"
+  become: true
 
 - name: Test if Vagrant exists.
   stat:
