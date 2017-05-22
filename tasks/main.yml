@@ -3,7 +3,7 @@
   file:
     path: "{{ servers_server_directory }}"
     state: directory
-  become: "{{ servers_directory_owner }}"
+  become: true
 
 - name: Clone server repositories.
   git:
